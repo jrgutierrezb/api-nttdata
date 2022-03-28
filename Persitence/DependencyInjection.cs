@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persitence.Context;
+using Persitence.Repositories;
 
 namespace Persitence
 {
@@ -16,6 +17,15 @@ namespace Persitence
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
+        }
+
+        public static void AddRepositories(this IServiceCollection services)
+        {
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IClienteRepository, ClienteRepository>();
+            services.AddTransient<ICuentaRepository, CuentaRepository>();
+            services.AddTransient<IMovimientoRepository, MovimientoRepository>();
+
         }
     }
 }

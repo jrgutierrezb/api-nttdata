@@ -2,8 +2,6 @@
 using Domain.Entity;
 using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,10 +25,10 @@ namespace Application.Features.ClienteFeatures.Commands
         }
         public class CreateClienteCommandHandler : IRequestHandler<CreateClienteCommand, long>
         {
-            private readonly IApplicationDbContext _context;
-            public CreateClienteCommandHandler(IApplicationDbContext context)
+            private readonly IClienteRepository _clienteRepository;
+            public CreateClienteCommandHandler(IClienteRepository clienteRepository)
             {
-                _context = context;
+                _clienteRepository = clienteRepository;
             }
 
             public async Task<long> Handle(CreateClienteCommand command, CancellationToken cancellationToken)
@@ -46,8 +44,7 @@ namespace Application.Features.ClienteFeatures.Commands
                     Contrasena = command.Contrasena,
                     Estado = command.Estado
                 };
-                _context.Clientes.Add(post);
-                await _context.SaveChangesAsync();
+                await _clienteRepository.Add(post);
                 return post.Id;
             }
         }
