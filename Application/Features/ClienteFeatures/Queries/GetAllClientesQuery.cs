@@ -1,10 +1,7 @@
 ﻿using Application.Interfaces;
 using Domain.Entity;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,22 +11,22 @@ namespace Application.Features.ClienteFeatures.Queries
     {
         public class GetAllClientesQueryHandler : IRequestHandler<GetAllClientesQuery, IEnumerable<Cliente>>
         {
-            private readonly IApplicationDbContext _context;
-            public GetAllClientesQueryHandler(IApplicationDbContext context)
+            private readonly IClienteRepository _clienteRepository;
+            public GetAllClientesQueryHandler(IClienteRepository clienteRepository)
             {
-                _context = context;
+                _clienteRepository = clienteRepository;
             }
 
             public async Task<IEnumerable<Cliente>> Handle(GetAllClientesQuery query, CancellationToken cancellationToken)
             {
-                var postList = await _context.Clientes.ToListAsync();
+                var postList = _clienteRepository.GetAll();
                 if (postList == null)
                 {
                     return null;
                 }
-                return postList.AsReadOnly();
+                return postList;
             }
         }
-        
+
     }
 }

@@ -1,10 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entity;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,15 +21,15 @@ namespace Application.Features.CuentaFeatures.Commands
         }
         public class UpdateCuentaCommandHandler : IRequestHandler<UpdateCuentaCommand, long>
         {
-            private readonly IApplicationDbContext _context;
-            public UpdateCuentaCommandHandler(IApplicationDbContext context)
+            private readonly ICuentaRepository _cuentaRepository;
+            public UpdateCuentaCommandHandler(ICuentaRepository cuentaRepository)
             {
-                _context = context;
+                _cuentaRepository = cuentaRepository;
             }
 
             public async Task<long> Handle(UpdateCuentaCommand command, CancellationToken cancellationToken)
             {
-                var cuenta = _context.Cuentas.Where(a => a.Id == command.Id).FirstOrDefault();
+                var cuenta = await _cuentaRepository.GetById(command.Id);
 
                 if (cuenta == null)
                 {
@@ -47,7 +43,7 @@ namespace Application.Features.CuentaFeatures.Commands
                     cuenta.SaldoInicial = command.SaldoInicial;
                     cuenta.Estado = command.Estado;
                     cuenta.ClienteId = command.ClienteId;
-                    await _context.SaveChangesAsync();
+                    _cuentaRepository.Update(cuenta);
                     return cuenta.Id;
                 }
             }

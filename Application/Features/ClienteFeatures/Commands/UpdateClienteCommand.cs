@@ -2,9 +2,6 @@
 using Domain.Entity;
 using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -29,15 +26,15 @@ namespace Application.Features.ClienteFeatures.Commands
         }
         public class UpdateClienteCommandHandler : IRequestHandler<UpdateClienteCommand, long>
         {
-            private readonly IApplicationDbContext _context;
-            public UpdateClienteCommandHandler(IApplicationDbContext context)
+            private readonly IClienteRepository _clienteRepository;
+            public UpdateClienteCommandHandler(IClienteRepository clienteRepository)
             {
-                _context = context;
+                _clienteRepository = clienteRepository;
             }
 
             public async Task<long> Handle(UpdateClienteCommand command, CancellationToken cancellationToken)
             {
-                var cliente = _context.Clientes.Where(a => a.Id == command.Id).FirstOrDefault();
+                var cliente = await _clienteRepository.GetById(command.Id);
 
                 if (cliente == null)
                 {
@@ -54,7 +51,7 @@ namespace Application.Features.ClienteFeatures.Commands
                     cliente.Telefono = command.Telefono;
                     cliente.Contrasena = command.Contrasena;
                     cliente.Estado = command.Estado;
-                    await _context.SaveChangesAsync();
+                    _clienteRepository.Update(cliente);
                     return cliente.Id;
                 }
             }

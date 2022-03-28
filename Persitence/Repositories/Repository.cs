@@ -1,7 +1,9 @@
 ﻿using Application.Interfaces;
 using Persitence.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Persitence.Repositories
@@ -22,12 +24,18 @@ namespace Persitence.Repositories
 
         }
 
-        public async Task AddRange(System.Collections.Generic.IEnumerable<T> entities)
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            _context.SaveChanges();
+        }
+
+        public async Task AddRange(IEnumerable<T> entities)
         {
             await _context.Set<T>().AddRangeAsync(entities);
         }
 
-        public IEnumerable<T> Find(System.Linq.Expressions.Expression<System.Func<T, bool>> expression)
+        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
         {
             return _context.Set<T>().Where(expression);
         }
@@ -37,7 +45,7 @@ namespace Persitence.Repositories
             return _context.Set<T>().ToList();
         }
 
-        public async Task<T> GetById(int id)
+        public async Task<T> GetById(long id)
         {
             return await _context.Set<T>().FindAsync(id);
         }

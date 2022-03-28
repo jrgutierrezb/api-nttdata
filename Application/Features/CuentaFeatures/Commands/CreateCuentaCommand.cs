@@ -1,9 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entity;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,10 +20,10 @@ namespace Application.Features.CuentaFeatures.Commands
         }
         public class CreateCuentaCommandHandler : IRequestHandler<CreateCuentaCommand, long>
         {
-            private readonly IApplicationDbContext _context;
-            public CreateCuentaCommandHandler(IApplicationDbContext context)
+            private readonly ICuentaRepository _cuentaRepository;
+            public CreateCuentaCommandHandler(ICuentaRepository cuentaRepository)
             {
-                _context = context;
+                _cuentaRepository = cuentaRepository;
             }
 
             public async Task<long> Handle(CreateCuentaCommand command, CancellationToken cancellationToken)
@@ -39,8 +36,7 @@ namespace Application.Features.CuentaFeatures.Commands
                     Estado = command.Estado,
                     ClienteId = command.ClienteId
                 };
-                _context.Cuentas.Add(cuenta);
-                await _context.SaveChangesAsync();
+                await _cuentaRepository.Add(cuenta);
                 return cuenta.Id;
             }
         }
