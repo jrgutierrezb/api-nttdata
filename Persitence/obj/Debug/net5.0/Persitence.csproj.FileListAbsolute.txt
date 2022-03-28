@@ -1,0 +1,17 @@
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Application.dll
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.csprojAssemblyReference.cache
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.AssemblyInfoInputs.cache
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.AssemblyInfo.cs
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Domain.dll
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Persitence.deps.json
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Persitence.dll
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\ref\Persitence.dll
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Persitence.pdb
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Application.pdb
+C:\Users\rogge\source\repos\NTTData\Persitence\bin\Debug\net5.0\Domain.pdb
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.csproj.CoreCompileInputs.cache
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.csproj.CopyComplete
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.dll
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\ref\Persitence.dll
+C:\Users\rogge\source\repos\NTTData\Persitence\obj\Debug\net5.0\Persitence.pdb
