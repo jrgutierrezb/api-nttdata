@@ -15,14 +15,14 @@ namespace Application.Features.MovimientoFeatures.Queries
         public long Id { get; set; }
         public class GetMovimientoByIdQueryHandler : IRequestHandler<GetMovimientoByIdQuery, Movimiento>
         {
-            private readonly IApplicationDbContext _context;
-            public GetMovimientoByIdQueryHandler(IApplicationDbContext context)
+            private readonly IMovimientoRepository _movimientoRepository;
+            public GetMovimientoByIdQueryHandler(IMovimientoRepository movimientoRepository)
             {
-                _context = context;
+                _movimientoRepository = movimientoRepository;
             }
             public async Task<Movimiento> Handle(GetMovimientoByIdQuery query, CancellationToken cancellationToken)
             {
-                var movimiento = _context.Movimientos.FirstOrDefault(a => a.Id == query.Id);
+                var movimiento = await _movimientoRepository.GetById(query.Id);
                 if (movimiento == null) return null;
                 return movimiento;
             }

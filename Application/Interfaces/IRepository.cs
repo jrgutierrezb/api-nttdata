@@ -7,10 +7,11 @@ namespace Application.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        Task<T> GetById(int id);
+        Task<T> GetById(long id);
         IEnumerable<T> GetAll();
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
         Task<int> Add(T entity);
+        void Update(T entity);
         Task AddRange(IEnumerable<T> entities);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);

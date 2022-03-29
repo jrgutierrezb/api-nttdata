@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yiVGdCoAuuSZcLsKE10B/JNjf2JQHoLUfTP6iIS0o2RdOl4m/4GtiX93ahV7P770/zdnFsk7GLcvA+ryDDAKtQ==",
+  "dgSpecHash": "TH+yDIZDbUk9KfYRmDXWph3/B8JN2rzLtGF2BFb2N119AwVNiNbDmVMYHJUi6iNaYIt0YlzGQ4Yge5Mu402Y0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\rogge\\source\\repos\\NTTData\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\rogge\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\rogge\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\rogge\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\rogge\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\rogge\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\rogge\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\rogge\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",

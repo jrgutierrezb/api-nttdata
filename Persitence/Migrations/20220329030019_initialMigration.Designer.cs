@@ -10,8 +10,8 @@ using Persitence.Context;
 namespace Persitence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220328045830_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20220329030019_initialMigration")]
+    partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,8 +70,8 @@ namespace Persitence.Migrations
                     b.Property<bool>("Estado")
                         .HasColumnType("bit");
 
-                    b.Property<int>("NumeroCuenta")
-                        .HasColumnType("int");
+                    b.Property<string>("NumeroCuenta")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("SaldoInicial")
                         .HasColumnType("decimal(10,2)");

@@ -27,15 +27,15 @@ namespace Application.Features.MovimientoFeatures.Commands
         }
         public class UpdateMovimientoCommandHandler : IRequestHandler<UpdateMovimientoCommand, long>
         {
-            private readonly IApplicationDbContext _context;
-            public UpdateMovimientoCommandHandler(IApplicationDbContext context)
+            private readonly IMovimientoRepository _movimientoRepository;
+            public UpdateMovimientoCommandHandler(IMovimientoRepository movimientoRepository)
             {
-                _context = context;
+                _movimientoRepository = movimientoRepository;
             }
 
             public async Task<long> Handle(UpdateMovimientoCommand command, CancellationToken cancellationToken)
             {
-                var cuenta = _context.Movimientos.Where(a => a.Id == command.Id).FirstOrDefault();
+                var cuenta = await _movimientoRepository.GetById(command.Id);
 
                 if (cuenta == null)
                 {
@@ -49,7 +49,7 @@ namespace Application.Features.MovimientoFeatures.Commands
                     cuenta.Valor = command.Valor;
                     cuenta.Saldo = command.Saldo;
                     cuenta.CuentaId = command.CuentaId;
-                    await _context.SaveChangesAsync();
+                    _movimientoRepository.Update(cuenta);
                     return cuenta.Id;
                 }
             }

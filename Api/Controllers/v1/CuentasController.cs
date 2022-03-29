@@ -1,5 +1,5 @@
-﻿using Application.Features.MovimientoFeatures.Commands;
-using Application.Features.MovimientoFeatures.Queries;
+﻿using Application.Features.CuentaFeatures.Commands;
+using Application.Features.CuentaFeatures.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,48 +8,48 @@ using System.Threading.Tasks;
 
 namespace Api.Controllers.v1
 {
-    public class MovimientoController : BaseApiController
+    public class CuentasController : BaseApiController
     {
         /// <summary>
-        /// Creates a New Movimiento.
+        /// Creates a New Cuenta.
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> Create(CreateMovimientoCommand command)
+        public async Task<IActionResult> Create(CreateCuentaCommand command)
         {
             return Ok(await Mediator.Send(command));
         }
 
         /// <summary>
-        /// Gets all Movimientos.
+        /// Gets all Cuentas.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            return Ok(await Mediator.Send(new GetAllMovimientosQuery()));
+            return Ok(await Mediator.Send(new GetAllCuentasQuery()));
         }
 
         /// <summary>
-        /// Gets Movimiento Entity by Id.
+        /// Gets Cuenta Entity by Id.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await Mediator.Send(new GetMovimientoByIdQuery { Id = id }));
+            return Ok(await Mediator.Send(new GetCuentaByIdQuery { Id = id }));
         }
 
         /// <summary>
-        /// Updates the Movimiento Entity based on Id.   
+        /// Updates the Cuenta Entity based on Id.   
         /// </summary>
         /// <param name="id"></param>
         /// <param name="command"></param>
         /// <returns></returns>
         [HttpPut("[action]")]
-        public async Task<IActionResult> Update(int id, UpdateMovimientoCommand command)
+        public async Task<IActionResult> Update(int id, UpdateCuentaCommand command)
         {
             if (id != command.Id)
             {

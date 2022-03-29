@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persitence.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class initialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,7 +33,7 @@ namespace Persitence.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NumeroCuenta = table.Column<int>(type: "int", nullable: false),
+                    NumeroCuenta = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TipoCuenta = table.Column<int>(type: "int", nullable: false),
                     SaldoInicial = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
                     Estado = table.Column<bool>(type: "bit", nullable: false),

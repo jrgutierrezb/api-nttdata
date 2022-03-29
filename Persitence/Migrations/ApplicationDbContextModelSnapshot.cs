@@ -68,8 +68,8 @@ namespace Persitence.Migrations
                     b.Property<bool>("Estado")
                         .HasColumnType("bit");
 
-                    b.Property<int>("NumeroCuenta")
-                        .HasColumnType("int");
+                    b.Property<string>("NumeroCuenta")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("SaldoInicial")
                         .HasColumnType("decimal(10,2)");

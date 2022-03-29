@@ -9,7 +9,7 @@ namespace Application.Features.CuentaFeatures.Commands
     public class UpdateCuentaCommand : IRequest<long>
     {
         public long Id { get; set; }
-        public int NumeroCuenta { get; set; }
+        public string NumeroCuenta { get; set; }
         public TipoCuentas TipoCuenta { get; set; }
         public decimal SaldoInicial { get; set; }
         public bool Estado { get; set; }

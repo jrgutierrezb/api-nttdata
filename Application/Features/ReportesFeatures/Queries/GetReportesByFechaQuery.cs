@@ -1,33 +1,35 @@
 ﻿using Application.Interfaces;
-using Domain.Entity;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Features.MovimientoFeatures.Queries
+namespace Application.Features.ReportesFeatures.Queries
 {
-    public class GetAllMovimientosQuery : IRequest<IEnumerable<Movimiento>>
+    public class GetReportesByFechaQuery : IRequest<IEnumerable<JObject>>
     {
-        public class GetAllMovimientosQueryHandler : IRequestHandler<GetAllMovimientosQuery, IEnumerable<Movimiento>>
+        public DateTime Fecha { get; set; }
+
+        public class GetReportesByFechaQueryHandler : IRequestHandler<GetReportesByFechaQuery, IEnumerable<JObject>>
         {
             private readonly IMovimientoRepository _movimientoRepository;
-            public GetAllMovimientosQueryHandler(IMovimientoRepository movimientoRepository)
+            public GetReportesByFechaQueryHandler(IMovimientoRepository movimientoRepository)
             {
                 _movimientoRepository = movimientoRepository;
             }
 
-            public async Task<IEnumerable<Movimiento>> Handle(GetAllMovimientosQuery query, CancellationToken cancellationToken)
+            public async Task<IEnumerable<JObject>> Handle(GetReportesByFechaQuery query, CancellationToken cancellationToken)
             {
                 var movimientos = _movimientoRepository.GetAll();
+
                 if (movimientos == null)
                 {
                     return null;
                 }
-                return movimientos;
+                return null;
             }
         }
     }
