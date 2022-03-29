@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "dff2c3af-b4e6-409a-a6d8-ac183323dc9e",
+		"name": "NTTData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente Jose Lema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Jose Lema\",\r\n  \"genero\": 0,\r\n  \"fechaNacimiento\": \"2022-03-29T04:21:29.702Z\",\r\n  \"identificacion\": \"0000000001\",\r\n  \"direccion\": \"Otavalo sn y principal\",\r\n  \"telefono\": \"098254785\",\r\n  \"contrasena\": \"1234\",\r\n  \"estado\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Marianela Montalvo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Marianela Montalvo\",\r\n  \"genero\": 1,\r\n  \"fechaNacimiento\": \"2022-03-29T04:21:29.702Z\",\r\n  \"identificacion\": \"0000000002\",\r\n  \"direccion\": \"Amazonas y  NNUU\",\r\n  \"telefono\": \"097548965\",\r\n  \"contrasena\": \"5678\",\r\n  \"estado\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Juan Osorio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Juan Osorio\",\r\n  \"genero\": 0,\r\n  \"fechaNacimiento\": \"2022-03-29T04:21:29.702Z\",\r\n  \"identificacion\": \"0000000003\",\r\n  \"direccion\": \"13 junio y Equinoccial\",\r\n  \"telefono\": \"098874587\",\r\n  \"contrasena\": \"1245\",\r\n  \"estado\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta 478758",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroCuenta\": \"478758\",\r\n  \"tipoCuenta\": 0,\r\n  \"saldoInicial\": 2000,\r\n  \"estado\": true,\r\n  \"clienteId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta 225487",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroCuenta\": \"225487\",\r\n  \"tipoCuenta\": 1,\r\n  \"saldoInicial\": 100,\r\n  \"estado\": true,\r\n  \"clienteId\": 2\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta 495878",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroCuenta\": \"495878\",\r\n  \"tipoCuenta\": 0,\r\n  \"saldoInicial\": 0,\r\n  \"estado\": true,\r\n  \"clienteId\": 3\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta 496825",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroCuenta\": \"496825\",\r\n  \"tipoCuenta\": 0,\r\n  \"saldoInicial\": 540,\r\n  \"estado\": true,\r\n  \"clienteId\": 2\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta 585545",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroCuenta\": \"585545\",\r\n  \"tipoCuenta\": 1,\r\n  \"saldoInicial\": 1000,\r\n  \"estado\": true,\r\n  \"clienteId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retiro Cuenta 496825",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2022-03-29T04:14:04.708Z\",\r\n    \"tipoMovimiento\": 1,\r\n    \"valor\": -540,\r\n    \"cuentaId\": 4\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debito Cuenta 495878",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2022-03-29T04:14:04.708Z\",\r\n    \"tipoMovimiento\": 0,\r\n    \"valor\": 150,\r\n    \"cuentaId\": 3\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debito Cuenta 225487",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2022-03-29T04:14:04.708Z\",\r\n    \"tipoMovimiento\": 0,\r\n    \"valor\": 600,\r\n    \"cuentaId\": 2\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retiro Cuenta 478758",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2022-03-29T04:14:04.708Z\",\r\n    \"tipoMovimiento\": 1,\r\n    \"valor\": -575,\r\n    \"cuentaId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
