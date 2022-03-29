@@ -412,6 +412,38 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Reporte",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44371/api/v1/Reportes?fecha=03%2F28%2F2022",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44371",
+					"path": [
+						"api",
+						"v1",
+						"Reportes"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "03%2F28%2F2022"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

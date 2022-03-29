@@ -6,4 +6,3 @@ C:\Users\rogge\source\repos\NTTData\Domain\obj\Debug\netstandard2.1\Domain.Assem
 C:\Users\rogge\source\repos\NTTData\Domain\obj\Debug\netstandard2.1\Domain.csproj.CoreCompileInputs.cache
 C:\Users\rogge\source\repos\NTTData\Domain\obj\Debug\netstandard2.1\Domain.dll
 C:\Users\rogge\source\repos\NTTData\Domain\obj\Debug\netstandard2.1\Domain.pdb
-C:\Users\rogge\source\repos\NTTData\Domain\obj\Debug\netstandard2.1\Domain.csprojAssemblyReference.cache
